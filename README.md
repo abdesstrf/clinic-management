@@ -16,5 +16,22 @@
 - Open the browser (Chrome, Brave), type localhost/clinicmanagementGithub/login/login-index.php and you should see the index page of the website.
 
 ### Pages :
-
+#Login page :
+![alt text](https://github.com/abdesstrf/clinic-management/blob/main/Screen_login.jpg?raw=true)
+#Home page :
+![alt text](https://github.com/abdesstrf/clinic-management/blob/main/Screen_home.jpg?raw=true)
+#Add event page :
+![alt text](https://github.com/abdesstrf/clinic-management/blob/main/Screen_AddEvent_home.jpg?raw=true)
+#User page :
+![alt text](https://github.com/abdesstrf/clinic-management/blob/main/Screen_user.jpg?raw=true)
+#Add user page :
+![alt text](https://github.com/abdesstrf/clinic-management/blob/main/Screen_AddUser_User.jpg?raw=true)
+#Patient page :
+![alt text](https://github.com/abdesstrf/clinic-management/blob/main/Screen_Patient.jpg?raw=true)
+#Add patient page :
+![alt text](https://github.com/abdesstrf/clinic-management/blob/main/Screen_AddPatient_Patient.jpg?raw=true)
+#Doctor page :
+![alt text](https://github.com/abdesstrf/clinic-management/blob/main/Screen_doctor.jpg?raw=true)
+#Add doctor page :
 ![alt text](https://github.com/abdesstrf/clinic-management/blob/main/Screen_AddDoctor_doctor.jpg?raw=true)
+
