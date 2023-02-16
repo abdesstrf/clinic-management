@@ -1,0 +1,662 @@
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exportée le document</title>
+    <link type="text/css" href="../bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+@page 
+{
+    size: auto;
+    margin: 0mm;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
+.size-a4
+{
+    width: 190mm;
+    height: 297mm;
+    margin: 45px;
+}
+
+</style>
+
+<body>
+    <input type="submit" class="no-print" id="button" onclick="window.print();" value="Download PDF" />
+    <div class="size-a4 mt-5" style="margin:0 auto;">
+
+        <!-- Le couple -->
+        <table id="t">
+            <thead>
+                <th class="bg-Secondary text-center" style="border-radius: 10px; font-size: 30px;" colspan="4">Compte-rendu FIV/ICSI</th>
+            </thead>
+            <tbody>
+                <!-- date -->
+                <tr>
+                    <td colspan="4" style="text-align: end;">Tanger, le <label name="DatePdf" id="DatePdf" style="margin-right: 10px;">10/10/2023</label></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Le couple :</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="fw-bold"><img src="../includes/img/female_96.png" style="width: 16px; height: 16px;">Madame</td>
+                    <td colspan="2" class="fw-bold"><img src="../includes/img/male_96.png" style="width: 16px; height: 16px;">Monsieur</td>
+                </tr>
+                <!-- Nom  -->
+                <tr>
+                    <td>
+                        <label>Nom:</label>
+                    </td>
+                    <td>
+                        <label name="FnomPDF" id="FnomPDF" class="fst-italic FnomPDF" >
+                    </td>
+    
+                    <td>
+                        <label>Nom:</label>
+                    </td>
+                    <td>
+                        <label name="HnomPDF" id="HnomPDF" class="fst-italic HnomPDF" >
+                    </td>
+                </tr>
+                <!-- Prenom -->
+                <tr>
+                    <td>
+                        <label>Prénom:</label>
+                    </td>
+                    <td>
+                        <label name="FprenomPDF" id="FprenomPDF" class="fst-italic FprenomPDF">
+                    </td>
+    
+                    <td>
+                        <label>Prénom:</label>
+                    </td>
+                    <td>
+                        <label name="HprenomPDF" id="HprenomPDF" class="fst-italic HprenomPDF">
+                    </td>
+                </tr>
+                <!-- Date naissance -->
+                <tr>
+                    <td>
+                        <label>Date de Naissance :</label>
+                    </td>
+                    <td>
+                        <label name="FdateNaissancePDF" id="FdateNaissancePDF" class="fst-italic FdateNaissancePDF">
+                    </td>
+    
+                    <td>
+                        <label>Date de Naissance :</label>
+                    </td>
+                    <td>
+                        <label name="HdateNaissancePDF" id="HdateNaissancePDF" class="fst-italic HdateNaissancePDF">
+                    </td>
+                </tr>
+                <!-- CIN -->
+                <tr>
+                    <td>
+                        <label>N° CIN :</label>
+                    </td>
+                    <td>
+                        <label name="FcinPDF" id="FcinPDF" class="fst-italic FcinPDF">
+                    </td>
+    
+                    <td>
+                        <label>N° CIN :</label>
+                    </td>
+                    <td>
+                        <label name="HcinPDF" id="HcinPDF" class="fst-italic HcinPDF">
+                    </td>
+                </tr>
+                <!-- Adresse -->
+                <tr>
+                    <td>
+                        <label>Adresse conjugale :</label>
+                    </td>
+                    <td colspan="3">
+                        <label name="adressePDF" id="adressePDF" class="fst-italic adressePDF">
+                    </td>
+                </tr>
+                <!-- Tentative -->
+                <tr>
+                    <td colspan="4">
+                        <span>A bénéficié de leur <span class="fw-bold"><label name="tentativePDF" id="tentativePDF" class="tentativePDF"></span> tentative au sein de notre centre de la Procréation Médicalement Assistée. Ci-dessous, les détails de cette tentative :</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <!-- Protocole de la Stimulation Ovarienne -->
+        <table>
+            <thead>
+                <th colspan="4"><span class="fw-bold">Protocole de la Stimulation Ovarienne</span></th>
+            </thead>
+            <tbody>
+                <!-- medecin traitant -->
+                <tr>
+                    <td>
+                        <label>Médecin traitant :</label>
+                    </td>
+                    <td colspan="3">
+                        <label name="medecinTraitentPDF" id="medecinTraitentPDF">
+                    </td>
+                </tr>
+                <!-- Date du début  -->
+                <tr>
+                    <td>
+                        <label>Date du début :</label>
+                    </td>
+                    <td colspan="3">
+                        <label name="dateDebutPDF" id="dateDebutPDF">
+                    </td>
+                </tr>
+                <!-- Durée de la stimulation ovarienne  -->
+                <tr>
+                    <td>
+                        <label>Durée de la stimulation ovarienne :</label>
+                    </td>
+                    <td colspan="3">
+                        <label name="dureeStimuOvariennePDF" id="dureeStimuOvariennePDF"></label><span>jours</span>
+                    </td>
+                </tr>
+                <!-- Traitement utilisé et dose totale  -->
+                <tr>
+                    <td>
+                        <label>Traitement utilisé et dose totale :</label>
+                    </td>
+                    <td colspan="3">
+                        <label name="traitementDoseTotalePDF" id="traitementDoseTotalePDF"></label><span> UI GONAL</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <!-- Paramètres spermatiques du sperme du conjoint -->
+        <table>
+            <thead>
+                <th colspan="4"><span class="fw-bold">Paramètres spermatiques du sperme du conjoint </span></th>
+            </thead>
+            <tbody>
+                <!-- Nature du prélèvement -->
+                <tr>
+                    <td>
+                        <label>Nature du prélèvement : </label>
+                    </td>
+                    <td colspan="3">
+                        <div class="input-group input-group-sm">
+                            <div >
+                                <input class="form-check-input" style="margin-left: 10px;" type="checkbox" name="spermeFraisPDF" id="spermeFraisPDF">
+                                <span style=" margin-left: 5px;">Sperme frais</span>
+                            </div>
+                            <div>
+                                <input class="form-check-input" style="margin-left: 10px;" type="checkbox" name="spermeCongelePDF" id="spermeCongelePDF">
+                                <span style=" margin-left: 5px;">Sperme congelé</span>
+                            </div>
+                            <div>
+                                <input class="form-check-input" style="margin-left: 10px;" type="checkbox" name="biopsieTesticulairePDF" id="biopsieTesticulairePDF">
+                                <span style=" margin-left: 5px;">Biopsie testiculaire</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Délai d'abstinence & Mobilité Totale -->
+                <tr>
+                    <td colspan="4">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <label>• Délai d'abstinence :</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <label name="delaiDabstinencePDF" id="delaiDabstinencePDF"></label><span> jours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <label>• Mobilité Totale (a+b+c) :</label>
+                                    </div>
+                                    <div class="col-3">
+                                        <label name="mobiliteTotalePDF" id="mobiliteTotalePDF"></label><span> %</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+               
+                <!-- Volume & Mobilité Progressive  -->
+                <tr>
+                    <td colspan="4">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <label>• Volume :</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <label name="volumePDF" id="volumePDF"></label><span> mL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <label>• Mobilité Progressive (a+b) :</label>
+                                    </div>
+                                    <div class="col-3">
+                                        <label name="mobiliteProgressivePDF" id="mobiliteProgressivePDF"></label><span> %</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Concentration & Formes typiques   -->
+                <tr>
+                    <td colspan="4">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <label>• Concentration :</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <label name="concentrationPDF" id="concentrationPDF"></label><span> M/mL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <label>• Formes typiques :</label>
+                                    </div>
+                                    <div class="col-3">
+                                        <label name="formesTypiquesPDF" id="formesTypiquesPDF"></label><span> %</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <!-- Résultats de la ponction folliculaire -->
+        <span class="fw-bold">Résultats de la ponction folliculaire </span>
+
+        <!-- Date de la ponction folliculaire -->
+        <div class="row">
+            <div class="col-6">
+                <label>Date de la ponction folliculaire  :</label>
+            </div>
+            <div class="col-6">
+                <label name="datePonstionFolliculairePDF" id="datePonstionFolliculairePDF"></label>
+            </div>
+        </div>
+
+        <!-- Nombre d'ovocytes récupérés  -->
+        <div class="row">
+            <div class="col-6">
+                <label>Nombre d'ovocytes récupérés :</label>
+            </div>
+            <div class="col-6">
+                <label name="nbOvocytesRecupPDF" id="nbOvocytesRecupPDF"></label>
+            </div>
+        </div>
+
+        <!-- Nombre d'ovocytes mâtures  -->
+        <div class="row">
+            <div class="col-6">
+                <label>Nombre d'ovocytes mâtures :</label>
+            </div>
+            <div class="col-6">
+                <label name="nbOvocytesMaturesPDF" id="nbOvocytesMaturesPDF"></label>
+            </div>
+        </div>
+
+        <!-- Nombre d'ovocytes fécondés  -->
+        <div class="row">
+            <div class="col-6">
+                <label>Nombre d'ovocytes fécondés :</label>
+            </div>
+            <div class="col-6">
+                <label name="nbOvocytesFecondesPDF" id="nbOvocytesFecondesPDF"></label>
+            </div>
+        </div>
+        
+        <!-- Nombre d'embryons obtenus   -->
+        <div class="row">
+            <div class="col-6">
+                <label>Nombre d'embryons obtenus :</label>
+            </div>
+            <div class="col-6">
+                <label name="nbEmbryonsObtenusPDF" id="nbEmbryonsObtenusPDF"></label>
+            </div>
+        </div>
+
+        <!-- Nombre d'embryons obtenus   -->
+        <div class="row">
+            <div class="col-6">
+                <label>Nombre d'embryons en culture prolongée :</label>
+            </div>
+            <div class="col-6">
+                <label name="nbEmbryonsCultureProlongeePDF" id="nbEmbryonsCultureProlongeePDF"></label>
+            </div>
+        </div>
+        
+        <!-- Nombre de blastocystes obtenus  -->
+        <div class="row">
+            <div class="col-6">
+                <label>Nombre de blastocystes obtenus :</label>
+            </div>
+            <div class="col-6">
+                <label name="nbBlastocystesObtenusPDF" id="nbBlastocystesObtenusPDF"></label>
+            </div>
+        </div>
+        
+        <!-- Nombre d’embryons/blastocytes transférés  -->
+        <div class="row">
+            <div class="col-6">
+                <label>Nombre d'embryons/blastocytes transférés :</label>
+            </div>
+            <div class="col-6">
+                <label name="nbEmbryonsTransferesPDF" id="nbEmbryonsTransferesPDF"></label>
+            </div>
+        </div>
+        
+        <!-- Nombre d'embryons vitrifiés  -->
+        <div class="row">
+            <div class="col-6">
+                <label>Nombre d'embryons vitrifiés :</label>
+            </div>
+            <div class="col-6">
+                <label name="nbEmbryonsVitrifiesPDF" id="nbEmbryonsVitrifiesPDF"></label>
+            </div>
+        </div>
+        
+        <!-- Nombre de blastocystes vitrifiés   -->
+        <div class="row">
+            <div class="col-6">
+                <label>Nombre de blastocystes vitrifiés :</label>
+            </div>
+            <div class="col-6">
+                <label name="nbBlastocystesVitrifiesPDF" id="nbBlastocystesVitrifiesPDF"></label>
+            </div>
+        </div>
+
+        <div class="row">
+            <span style="font-size: 12px;">*Voir Compte-rendu embryons / blastocystes vitrifiés*</span>
+        </div>
+    </div>
+
+    <div class="size-a4 mt-5" style="margin:0 auto;">
+        <!-- Le couple -->
+        <table id="t">
+            <thead>
+                <th class="bg-Secondary text-center" style="border-radius: 10px; font-size: 30px;" colspan="4">Compte-rendu FIV/ICSI</th>
+            </thead>
+            <tbody>
+                <!-- date -->
+                <tr>
+                    <td colspan="4" style="text-align: end;">Tanger, le <label name="DatePdf" id="DatePdf" style="margin-right: 10px;">10/10/2023</label></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Le couple :</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="fw-bold"><img src="../includes/img/female_96.png" style="width: 16px; height: 16px;">Madame</td>
+                    <td colspan="2" class="fw-bold"><img src="../includes/img/male_96.png" style="width: 16px; height: 16px;">Monsieur</td>
+                </tr>
+                <!-- Nom  -->
+                <tr>
+                    <td>
+                        <label>Nom:</label>
+                    </td>
+                    <td>
+                        <label name="FnomPDF" id="FnomPDF" class="fst-italic FnomPDF" >
+                    </td>
+    
+                    <td>
+                        <label>Nom:</label>
+                    </td>
+                    <td>
+                        <label name="HnomPDF" id="HnomPDF" class="fst-italic HnomPDF" >
+                    </td>
+                </tr>
+                <!-- Prenom -->
+                <tr>
+                    <td>
+                        <label>Prénom:</label>
+                    </td>
+                    <td>
+                        <label name="FprenomPDF" id="FprenomPDF" class="fst-italic FprenomPDF">
+                    </td>
+    
+                    <td>
+                        <label>Prénom:</label>
+                    </td>
+                    <td>
+                        <label name="HprenomPDF" id="HprenomPDF" class="fst-italic HprenomPDF">
+                    </td>
+                </tr>
+                <!-- Date naissance -->
+                <tr>
+                    <td>
+                        <label>Date de Naissance :</label>
+                    </td>
+                    <td>
+                        <label name="FdateNaissancePDF" id="FdateNaissancePDF" class="fst-italic FdateNaissancePDF">
+                    </td>
+    
+                    <td>
+                        <label>Date de Naissance :</label>
+                    </td>
+                    <td>
+                        <label name="HdateNaissancePDF" id="HdateNaissancePDF" class="fst-italic HdateNaissancePDF">
+                    </td>
+                </tr>
+                <!-- CIN -->
+                <tr>
+                    <td>
+                        <label>N° CIN :</label>
+                    </td>
+                    <td>
+                        <label name="FcinPDF" id="FcinPDF" class="fst-italic FcinPDF">
+                    </td>
+    
+                    <td>
+                        <label>N° CIN :</label>
+                    </td>
+                    <td>
+                        <label name="HcinPDF" id="HcinPDF" class="fst-italic HcinPDF">
+                    </td>
+                </tr>
+                <!-- Adresse -->
+                <tr>
+                    <td>
+                        <label>Adresse conjugale :</label>
+                    </td>
+                    <td colspan="3">
+                        <label name="adressePDF" id="adressePDF" class="fst-italic adressePDF">
+                    </td>
+                </tr>
+                <!-- Tentative -->
+                <tr>
+                    <td colspan="4">
+                        <span>A bénéficié de leur <span class="fw-bold"><label name="tentativePDF" id="tentativePDF" class="tentativePDF"></span> tentative au sein de notre centre de la Procréation Médicalement Assistée. Ci-dessous, les détails de cette tentative :</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <span class="fw-bold">VITRIFICATION</span>
+
+        <!-- Date(s) de Vitrification  -->
+        <div class="row">
+            <div class="col-6">
+                <label>Date(s) de Vitrification :</label>
+            </div>
+            <div class="col-6">
+                <label name="dateVitrificationPDF" id="dateVitrificationPDF"></label>
+            </div>
+        </div>
+
+        <!-- Nombre Total des paillettes  -->
+        <div class="row">
+            <div class="col-6">
+                <label>Nombre Total des paillettes :</label>
+            </div>
+            <div class="col-6">
+                <label name="nbTotalPaillettesPDF" id="nbTotalPaillettesPDF"></label><span> paillette</span>
+            </div>
+        </div>
+
+        <!-- Nombre d’embryons/blastocytes vitrifiés   -->
+        <div class="row">
+            <div class="col-6">
+                <label>Nombre dembryons/blastocytes vitrifiés :</label>
+            </div>
+            <div class="col-6">
+                <label name="nbEmbryonsBlastocytesVitrifiesPDF" id="nbEmbryonsBlastocytesVitrifiesPDF"></label>
+            </div>
+        </div>
+
+        <!-- Qualité embryonnaire   -->
+        <div class="row">
+            <div class="col-6">
+                <label>Qualité embryonnaire :</label>
+            </div>
+            <div class="col-6" id="div-label">
+                
+            </div>
+        </div>
+
+        <!-- Date du Renouvellement    -->
+        <div class="row">
+            <div class="col-6">
+                <label>Date du Renouvellement :</label>
+            </div>
+            <div class="col-6">
+                <label name="dateRenouvellementPDF" id="dateRenouvellementPDF"></label>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+<script type="text/javascript" src="../bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var patient_id = 42;
+		$.ajax({
+			url:"selectonepatient.php",
+			method:"POST",
+			data:{patient_id:patient_id},
+			dataType:"json",
+			success:function(data)
+			{
+				// Information Patient 
+				$('.FnomPDF').text(data.Fnom);
+				$('.FprenomPDF').text(data.Fprenom);
+				$('.FdateNaissancePDF').text(data.FdateNaissance);
+				$('.FcinPDF').text(data.Fcin);
+				$('.HnomPDF').text(data.Hnom);
+				$('.HprenomPDF').text(data.Hprenom);
+				$('.HdateNaissancePDF').text(data.HdateNaissance);
+				$('.HcinPDF').text(data.Hcin);
+				$('.adressePDF').text(data.adresse);
+				$('.tentativePDF').text(data.tentative);
+                // window.print();
+                // window.location.href = "patient.php";
+            }
+        });
+        var patient_idfk = 42;
+        $.ajax({
+			url:"selectoneInfoFolder.php",
+			method:"POST",
+			data:{patient_idfk:patient_idfk},
+			dataType:"json",
+			success:function(data)
+			{
+				$('#medecinTraitentPDF').text(data.medecinTraitant);
+				$('#dateDebutPDF').text(data.dateDebut);
+				$('#dureeStimuOvariennePDF').text(data.dureeStimuOvarienne);
+				$('#traitementDoseTotalePDF').text(data.traitementDoseTotale);
+				// -----------------------------------------------------------------
+				if(data.spermeFrais=="true")
+				$('input[name="spermeFraisPDF"]').prop("checked",true);
+				else $('input[name="spermeFraisPDF"]').prop("checked",false);
+				// -----------------------------------------------------------------
+				if(data.spermeCongele=="true")
+				$('input[name="spermeCongelePDF"]').prop("checked",true);
+				else $('input[name="spermeCongelePDF"]').prop("checked",false);
+				// -----------------------------------------------------------------
+				if(data.biopsieTesticulaire=="true")
+				$('input[name="biopsieTesticulairePDF"]').prop("checked",true);
+				else $('input[name="biopsieTesticulairePDF"]').prop("checked",false);
+                // ------------------------------------------------------------------
+				$('#delaiDabstinencePDF').text(data.delaiDabstinence);
+				$('#mobiliteTotalePDF').text(data.mobiliteTotale);
+				$('#volumePDF').text(data.volume);
+				$('#concentrationPDF').text(data.concentration);
+				$('#mobiliteProgressivePDF').text(data.mobiliteProgressive);
+				$('#formesTypiquesPDF').text(data.formesTypiques);
+				$('#datePonstionFolliculairePDF').text(data.datePonstionFolliculaire);
+				$('#nbOvocytesRecupPDF').text(data.nbOvocytesRecup);
+				$('#nbOvocytesMaturesPDF').text(data.nbOvocytesMatures);
+				$('#nbOvocytesFecondesPDF').text(data.nbOvocytesFecondes);
+				$('#nbEmbryonsObtenusPDF').text(data.nbEmbryonsObtenus);
+				$('#nbEmbryonsCultureProlongeePDF').text(data.nbEmbryonsCultureProlongee);
+				$('#nbBlastocystesObtenusPDF').text(data.nbBlastocystesObtenus);
+				$('#nbEmbryonsVitrifiesPDF').text(data.nbEmbryonsVitrifies);
+				$('#nbEmbryonsTransferesPDF').text(data.nbEmbryonsTransferes);
+				$('#nbBlastocystesVitrifiesPDF').text(data.nbBlastocystesVitrifies);
+				$('#nbTotalPaillettesPDF').text(data.nbTotalPaillettes);
+				$('#dateVitrificationPDF').text(data.dateVitrification);
+				$('#nbEmbryonsBlastocytesVitrifiesPDF').text(data.nbEmbryonsBlastocytesVitrifies);
+				$('#dateRenouvellementPDF').text(data.dateRenouvellement);
+				labels_Generator(data.nbEmbryonsBlastocytesVitrifies);
+				$('#QualiteEmbryonnaire0PDF').text(data.QualiteEmbryonnaire0);
+				$('#QualiteEmbryonnaire1PDF').text(data.QualiteEmbryonnaire1);
+				$('#QualiteEmbryonnaire2PDF').text(data.QualiteEmbryonnaire2);
+				$('#QualiteEmbryonnaire3PDF').text(data.QualiteEmbryonnaire3);
+				$('#QualiteEmbryonnaire4PDF').text(data.QualiteEmbryonnaire4);
+				$('#QualiteEmbryonnaire5PDF').text(data.QualiteEmbryonnaire5);
+				$('#QualiteEmbryonnaire6PDF').text(data.QualiteEmbryonnaire6);
+				$('#QualiteEmbryonnaire7PDF').text(data.QualiteEmbryonnaire7);
+				$('#QualiteEmbryonnaire8PDF').text(data.QualiteEmbryonnaire8);
+				$('#QualiteEmbryonnaire9PDF').text(data.QualiteEmbryonnaire9);
+            }
+        });
+    });
+
+    function labels_Generator(value){
+        var field = "";
+        for( i = 0; i < value; i++){
+		    field += `<label id='QualiteEmbryonnaire${i}PDF' name='QualiteEmbryonnaire${i}PDF'><span>|</span></label> `;
+	    }
+        document.getElementById('div-label').innerHTML = field;
+    }
+</script>
+</html>

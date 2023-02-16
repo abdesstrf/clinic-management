@@ -1,0 +1,64 @@
+	body
+	{
+		margin: 0;
+		padding: 0;
+		background-color: #f1f1f1;
+	}
+	.box
+	{
+		width: 100%;
+		padding: 20px;
+		/* background-color: #fff; */
+		/* border: 1px solid #ccc; */
+		/* border-radius: 5px; */
+		margin-top: 10px;
+	}
+	#cat1{
+		background-color: aquamarine;
+	}
+	#cat2{
+		background-color: rgb(246, 255, 127);
+	}
+	#cat3{
+		background-color: rgb(129, 127, 255);
+	}
+	#cat4{
+		background-color: rgb(255, 127, 187);
+	}
+	#cat5{
+		background-color: rgb(161, 127, 255);
+	}
+	#cat6{
+		background-color: rgb(255, 204, 127);
+	}
+	#cat7{
+		background-color: rgb(66, 161, 141);
+	}
+	#cat8{
+		background-color: rgb(55, 190, 134);
+	}
+	#cat9{
+		background-color: rgb(158, 88, 149);
+	}
+	#cat10{
+		background-color: rgb(33, 116, 104);
+	}
+	#cat11{
+		background-color: rgb(128, 43, 120);
+	}
+	#cat12{
+		background-color: rgb(51, 161, 23);
+	}
+	#cat13{
+		background-color: rgb(134, 180, 73);
+	}
+	#cat14{
+		background-color: rgb(180, 214, 100);
+	}
+	#cat15{
+		background-color: rgb(94, 87, 194);
+	}
+
+	/* .fc-time-grid .fc-slats td {
+		height: 3.2em;
+	} */

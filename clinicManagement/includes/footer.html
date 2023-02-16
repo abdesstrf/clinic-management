@@ -1,0 +1,14 @@
+    </section>
+    <script>
+        // To show the email
+        var fullName = "<?php echo $_SESSION['NomComplet']; ?>";
+        var names = fullName.split(" ");
+        // var firstInitial = names[0].substring(0,1);
+        var firstInitial = names[0];
+        var lastInitial = names[1];
+        document.getElementById("show-email").innerHTML = lastInitial + '_' + firstInitial;
+    </script>
+    
+    <script type="text/javascript" src="../bootstrap.bundle.min.js"></script>
+</body>
+</html>
