@@ -34,4 +34,5 @@
 ![alt text](https://github.com/abdesstrf/clinic-management/blob/main/Screen_doctor.jpg?raw=true)
 #Add doctor page :
 ![alt text](https://github.com/abdesstrf/clinic-management/blob/main/Screen_AddDoctor_doctor.jpg?raw=true)
-
+#Add Folder page :
+![alt text](https://github.com/abdesstrf/clinic-management/blob/main/Screen_addFolder.jpg?raw=true)
